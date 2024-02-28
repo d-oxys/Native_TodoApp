@@ -1,12 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { Button } from 'react-native-paper';
+import BottomNavigation from './components/bottonNavigation';
+import { TaskProvider } from './store/taskProvider';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <TaskProvider>
+        <BottomNavigation />
+      </TaskProvider>
+    </>
   );
 }
 
